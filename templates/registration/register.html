@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% block content %}
+{% block header %}{% endblock header %}
+
+<!-- Register
+    ================================================== -->
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+  <div class="container">
+        <div class="row gx-0">
+            <div class="col-md-7 col-xl-4 mx-auto">
+                <!-- Register -->
+                <h3 class="mb-6">Sign Up and Start Learning!</h3>
+                {% include "components/msg.html" %}
+
+                <!-- Form Register -->
+                <form class="mb-5" method="post" action="{% url 'register' %}">
+                    {% csrf_token %}
+
+                    <!-- username -->
+                    <div class="form-group mb-5">
+                        <label for="modalSignupusername1">
+                            Username
+                        </label>
+                        <input type="text" class="form-control" id="modalSignupusername1" placeholder="John" name="username">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group mb-5">
+                        <label for="modalSignupEmail1">
+                            Email
+                        </label>
+                        <input type="email" class="form-control" id="modalSignupEmail1" placeholder="johndoe@creativelayers.com" name="email">
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group mb-5">
+                        <label for="modalSignupPassword3">
+                            Password
+                        </label>
+                        <input type="password" class="form-control" id="modalSignupPassword3" placeholder="**********" name="password">
+                    </div>
+
+                    <!-- Submit -->
+                    <button class="btn btn-block btn-primary" type="submit">
+                        SIGN UP
+                    </button>
+
+                </form>
+
+                <!-- Text -->
+                <p class="mb-0 font-size-sm text-center">
+                    Already have an account? <a class="text-underline" href="login.html">Log In</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}{% endblock footer %}

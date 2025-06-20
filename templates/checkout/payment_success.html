@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Payment-Successful{% endblock  %}
+{% load course_tags %}
+{% block content %}
+<div class="text-center py-10">
+  <h2 class="text-green-600 text-3xl font-bold mb-4">🎉 Payment Successful!</h2>
+  <p class="text-gray-700">Thank you for purchasing <strong>{{ course.title }}</strong>.</p>
+  <a href="{% url 'home' %}" class="text-blue-600 underline mt-4 inline-block">Back to Home</a>
+</div> 
+
+{% endblock %}
